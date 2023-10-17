@@ -6,7 +6,8 @@
 > url：https://www.paddlepaddle.org.cn/
 ### 在Python解释器中顺利执行如下命令
 ```
-import paddle 
+import paddle
+
 paddle.utils.run_check()
 ```
 *如果命令行出现以下提示，说明PaddlePaddle安装成功*
