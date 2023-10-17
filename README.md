@@ -4,11 +4,11 @@
 ## 1.创建ppseg环境
 ### 1.1安装paddlepaddle-gpu（>2.4）
 url：https://www.paddlepaddle.org.cn/
-# 在Python解释器中顺利执行如下命令
+### 在Python解释器中顺利执行如下命令
 >>> import paddle
 >>> paddle.utils.run_check()
-# 如果命令行出现以下提示，说明PaddlePaddle安装成功
-# PaddlePaddle is installed successfully! Let's start deep learning with PaddlePaddle now.
+#### 如果命令行出现以下提示，说明PaddlePaddle安装成功
+#### PaddlePaddle is installed successfully! Let's start deep learning with PaddlePaddle now.
 
 ### 1.2下载安装paddleseg
 git-url:  
