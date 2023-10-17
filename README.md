@@ -61,4 +61,5 @@ sh tests/install/check_predict.sh
     对应Images子文件夹，用于coco格式json中categories字段的映射，如果是新类别，应该设置不同的映射值
 ## 3.运行
 run 01_promt_predict_mask.py
+### 4.paddleSeg项目和ppseg虚拟环境包（CUDA 11.2）
     
