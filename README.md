@@ -62,4 +62,4 @@ sh tests/install/check_predict.sh
 ## 3.运行
 run 01_promt_predict_mask.py
 ### 4.paddleSeg项目和ppseg虚拟环境包（CUDA 11.2）
-    
+    链接：https://pan.baidu.com/s/1BqdBJEnMKDChuSWFtKxE0w?pwd=4567 提取码：4567
