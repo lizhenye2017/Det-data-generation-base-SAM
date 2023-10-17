@@ -146,12 +146,15 @@ class Mask_Process():
         '''debug'''
         '''debug'''
         mask_lib = list(Path(self.mask_path).rglob('*_mask_*'))
+        # 设置贴图个数
         for _ in range(random.randint(4,9)):
             #根据mask和Img的shape设置缩放阈值
             mask_path = os.path.join(self.mask_path, str(random.choice(mask_lib)))
             mask_name = mask_path.split('\\')[-2]
+            # H,W 随机缩放
             scala = random.uniform(0.3,3)
             Fxy = [scala*random.uniform(0.6,1.6),scala*random.uniform(0.6,1.6)]
+            # 随机贴图位置
             point = [random.randint(0,self.H),random.randint(0,self.W)]
             single_mask = {"imgpath": self.img_path, "maskpath":mask_path, "Fxy": Fxy,  "point": point, "maskname":mask_name, "affine":True}
             all_mask.append(single_mask)
@@ -173,7 +176,7 @@ class Mask_Process():
             # mask与对应位置做与运算
             self.img[y:y+h,x:x+w,:] = cv2.bitwise_and(self.img[y:y+h,x:x+w,:],re_mask)
 
-            '''色调融合'''
+            '''色调融合-直方图匹配'''
             clip_img = exposure.match_histograms(clip_img, self.img, multichannel=True)
             clip_img = cv2.bitwise_and(clip_img, cv2.bitwise_not(re_mask))
             # 贴图与对应位置做加法
